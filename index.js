@@ -288,9 +288,11 @@ btnSignin.onclick = (e)=>{
         let idUser = respons.data.user.id
         let tokenSignin = respons.data.token
         let nametheuser = respons.data.user.username
+        let names = respons.data.user.name
         localStorage.setItem("name",nametheuser)
         localStorage.setItem("tokens",tokenSignin)
         localStorage.setItem("idUser",idUser)
+        localStorage.setItem("name",names)
         checkeUserlogin()
         yosef()
     })
