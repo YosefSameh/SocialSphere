@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+
+    <link rel="stylesheet" href="main.css">
+    <!-- font awsem -->
+    <link rel="stylesheet" href="css/all.min.css">
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- صوره جنب اسم الصفحة  -->
+    <link rel="web site icon" href="">
+    
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+
+
+<body class="body">
+
+
+       <!-- ========== loader  ============ -->
+       <div class="loader" id="loader"><div class="lds-ring"><div></div><div></div><div></div><div></div></div></div>
+       <!-- ========== loader  ============ -->
+
+
+        <!-- ============= Delet =============== -->
+        <div class="modal fade" id="model-Delet" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Aar You Shour Delet This post ?</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-danger "  id="btn-delet">Delet</button>
+                </div>
+            </div>
+            </div>
+        </div>
+        <!-- ============= Delet =============== -->
+
+    <!-- =============  Nav ===============-->
+    <div class="d-flex justify-content-center flex-column align-items-center " >
+        <div class="d-flex justify-content-between     Nav ">
+            <div class="d-flex justify-content-between div-nav  align-items-center">
+                <!-- ============ Nav ============== -->
+                <nav class="navbar navbar-expand-lg navbar-light bg-white">
+                    <div class="container-fluid">
+                    <a class="navbar-brand" href="index.html">SocialSphere</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="profile.html" id="profile">Profile</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        </div>
+        
+        
+        
+    </div>
+    </div>
+
+<!-- =============  Nav ===============-->
+
+
+
+    <!-- ============= Card ===============-->
+        <div class="w-100 ">
+            <div class="w-100 div-card  d-flex justify-content-center align-items-center" >
+                <div class=" card btn-danger mt-5 d-flex align-items-center  bg-white p-4" >
+                    <img  id="img-profile" src="" alt="" style="border-radius: 50%; width: 25%; height: 150px;">
+                    <div class="w-100 d-flex justify-content-center ms-3   flex-column">
+                        <h5 class="d-flex align-items-center text-secondary " style="width: 240px;"  >Name: <span class="text-black" id="name"> </span></h5>
+                        <h5 class="d-flex align-items-center text-secondary " style="width: 240px;">UserName:<span class="text-black" id="username"></span></h5>
+                        <h5 class="d-flex align-items-center text-secondary " style="width: 240px;  " >Email: <span class="text-black" id="email"></span></h5>
+                    </div>
+                    <div class="comment-posts w-100   ms-4   flex-column">
+                        <p class="d-flex align-items-center "><span class="fs-2 me-2" id="count-communt">0</span> Comment</p>
+                        <p class="d-flex align-items-center " style="width: 86px;"><span class="fs-2 me-2" id="count-posts">0</span> Posts</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <!-- ============= Card ===============-->
+
+    <!-- ============= Posts ===============-->
+
+    <div class="w-100 ">
+        <div class="w-100  d-flex justify-content-center align-items-center flex-column" >
+            <div class=" div-posts btn-danger mt-5 d-flex  align-items-center" >
+                <h3 >Your Posts</h3>
+            </div>
+            <div class="mt-5    collect-posts">
+                
+            </div>
+        </div>
+    </div>
+
+    <!-- ============= Posts ===============-->
+
+
+
+
+    <script src="profile.js"></script>
+    <!-- <script src="index.js"></script> -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
