@@ -55,7 +55,6 @@ let showPostsUser = ()=>{
     toggleloder(true)
     axios.get(`https://tarmeezacademy.com/api/v1/users/${idUser}/posts`)
     .then((response)=>{
-        toggleloder(false)
         let postsUser = response.data.data
         collectposts.innerHTML = ""
         let EditAndDeleteBtnContent = ``
@@ -99,6 +98,9 @@ let showPostsUser = ()=>{
                 
                 
             })
+            .finally(()=>{
+                toggleloder(false)
+            })
         }
     
 
@@ -120,11 +122,14 @@ let idpost
             toggleloder(true)
         axios.delete(`https://tarmeezacademy.com/api/v1/posts/${idpost}`,config)
         .then((respons)=>{
-            toggleloder(false)
+            
             const hidenmodel = bootstrap.Modal.getInstance(modelDelet) 
                 hidenmodel.hide()
             showPostsUser()
             showUserdetiles()
+        })
+        .finally(()=>{
+            toggleloder(false)
         })
     }
 
